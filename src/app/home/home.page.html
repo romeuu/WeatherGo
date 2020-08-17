@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      WeatherGo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,15 @@
   </ion-header>
 
   <div id="container">
+    <form id="login" [formGroup]="inputBar" (ngSubmit)="start()">
+      <ion-searchbar placeholder="Search for your city..." formControlName="search"></ion-searchbar>
+      <ion-button type="submit">Search</ion-button>
+    </form>
     <h1>Welcome to WeatherGo!</h1>
     <h6>Below, you can see the weather prediction for your current location.</h6>
+    <!--<i class="wi wi-owm-200 wi-title"></i>-->
+    <div id="weather">
+
+    </div>
   </div>
 </ion-content>
